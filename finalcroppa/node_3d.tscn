@@ -1,0 +1,85 @@
+[gd_scene load_steps=14 format=3 uid="uid://dkxv7ltu3hro1"]
+
+[ext_resource type="PackedScene" uid="uid://qkd83nk86www" path="res://sprite_3d.tscn" id="1_yuebu"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="2_50nin"]
+[ext_resource type="Script" path="res://sprite_3d2.gd" id="3_gk10o"]
+[ext_resource type="Script" path="res://sprite_3d3.gd" id="4_3jm5t"]
+[ext_resource type="Script" path="res://label_3d0.gd" id="5_n3nkw"]
+[ext_resource type="Script" path="res://sprite_3d4.gd" id="5_vdlop"]
+[ext_resource type="Script" path="res://label_3d3.gd" id="6_7ann7"]
+[ext_resource type="Script" path="res://sprite_3d5.gd" id="6_ywf1c"]
+[ext_resource type="Script" path="res://label_3d10.gd" id="7_llax0"]
+[ext_resource type="Script" path="res://label_3d4.gd" id="7_mqhkg"]
+[ext_resource type="PackedScene" uid="uid://b0yvpbxm5nhgu" path="res://label_3d.tscn" id="7_yfgcx"]
+[ext_resource type="Script" path="res://label_3d5.gd" id="8_4iilk"]
+[ext_resource type="Script" path="res://label_3d40.gd" id="9_wb03c"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sprite3D" parent="." instance=ExtResource("1_yuebu")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.353553, 0.612373, 0, 0.866026, 0.5, -0.707107, -0.353553, 0.612373, 37.9831, 30.5905, 37.3835)
+cull_mask = 1
+projection = 1
+size = 10.5
+script = ExtResource("2_50nin")
+_sprite_layers = 1
+
+[node name="Sprite3D2" parent="." instance=ExtResource("1_yuebu")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.748673, 0)
+script = ExtResource("3_gk10o")
+
+[node name="Label3D" parent="Sprite3D2" instance=ExtResource("7_yfgcx")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -4.711, -5.28964, -0.683326)
+modulate = Color(1, 1, 0, 1)
+font_size = 64
+outline_size = 0
+script = ExtResource("5_n3nkw")
+
+[node name="Sprite3D3" parent="." instance=ExtResource("1_yuebu")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.514877, 0)
+script = ExtResource("4_3jm5t")
+
+[node name="Label3D" parent="Sprite3D3" instance=ExtResource("7_yfgcx")]
+transform = Transform3D(1, 0, -4.37114e-08, -4.37114e-08, 3.55271e-15, -1, 0, 1, 3.55271e-15, 2.4995, 7.936, -3.16385)
+font_size = 60
+outline_size = 0
+script = ExtResource("6_7ann7")
+
+[node name="Label3D2" parent="Sprite3D3" instance=ExtResource("7_yfgcx")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -4.711, -5.311, -0.387065)
+font_size = 50
+outline_size = 0
+script = ExtResource("7_llax0")
+
+[node name="Sprite3D4" parent="." instance=ExtResource("1_yuebu")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -1.32298, 0)
+script = ExtResource("5_vdlop")
+
+[node name="Label3D" parent="Sprite3D4" instance=ExtResource("7_yfgcx")]
+transform = Transform3D(1, 0, -4.37114e-08, -4.37114e-08, 3.55271e-15, -1, 0, 1, 3.55271e-15, 2.48937, 7.936, -3.17087)
+font_size = 60
+outline_size = 0
+script = ExtResource("7_mqhkg")
+
+[node name="Label3D2" parent="Sprite3D4" instance=ExtResource("7_yfgcx")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -4.711, -5.4255, -0.645352)
+font_size = 50
+outline_size = 0
+script = ExtResource("9_wb03c")
+
+[node name="Sprite3D5" parent="." instance=ExtResource("1_yuebu")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -2.11241, 0)
+script = ExtResource("6_ywf1c")
+
+[node name="Label3D" parent="Sprite3D5" instance=ExtResource("7_yfgcx")]
+transform = Transform3D(1, 0, -4.37114e-08, -4.37114e-08, 3.55271e-15, -1, 0, 1, 3.55271e-15, 2.60161, 7.93581, -3.25935)
+font_size = 60
+outline_size = 0
+script = ExtResource("8_4iilk")
+
+[node name="Label3D2" parent="Sprite3D5" instance=ExtResource("7_yfgcx")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -4.71065, -5.22918, -0.977673)
+font_size = 50
+outline_size = 0
